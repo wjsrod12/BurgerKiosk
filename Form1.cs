@@ -11,6 +11,7 @@ namespace BurgerKiosk
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            
             rdoHamBurger.Checked = false;
             rdoBulgogiBurger.Checked = false;
             rdoCheeseBurger.Checked = false;
@@ -22,6 +23,9 @@ namespace BurgerKiosk
 
             lstOrder.Items.Clear();
             lblTotalCost.Text = "총 주문 금액: 0원";
+
+            btnReset.Focus();
+            
 
         }
 
@@ -69,7 +73,7 @@ namespace BurgerKiosk
             }
 
             lblTotalCost.ForeColor = Color.MediumBlue;
-            lblTotalCost.Text= "총 주문 금액:" +totalCost+"원";
+            lblTotalCost.Text= "총 주문 금액:" + totalCost.ToString("N0")+"원";
 
             if (totalCost == 0)
             {

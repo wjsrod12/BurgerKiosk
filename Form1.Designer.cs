@@ -218,7 +218,7 @@
             grbOrderList.Location = new Point(509, 106);
             grbOrderList.Name = "grbOrderList";
             grbOrderList.Size = new Size(262, 246);
-            grbOrderList.TabIndex = 3;
+            grbOrderList.TabIndex = 0;
             grbOrderList.TabStop = false;
             grbOrderList.Text = "주문 내역";
             // 
@@ -268,6 +268,7 @@
             // 
             // Form1
             // 
+            AcceptButton = btnOrder;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
