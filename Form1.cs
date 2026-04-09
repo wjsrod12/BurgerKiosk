@@ -85,54 +85,58 @@ namespace BurgerKiosk
 
         private void UpdateOrder()
         {
+            // Clear previous items so the list reflects current selections immediately
+            lstOrder.Items.Clear();
+
             int totalCost = 0;
-            string order = "";
 
             if (rdoHamBurger.Checked)
             {
-                order += "햄버거\n";
                 totalCost += 5000;
                 lstOrder.Items.Add("햄버거 5,000원");
             }
             else if (rdoBulgogiBurger.Checked)
             {
-                order += "불고기버거\n";
                 totalCost += 4000;
                 lstOrder.Items.Add("불고기 버거 4,000원");
             }
             else if (rdoCheeseBurger.Checked)
             {
-                order += "치즈버거\n";
                 totalCost += 3000;
                 lstOrder.Items.Add("치즈 버거 3,000원");
             }
 
             if (chkPotato.Checked)
             {
-                order += "감자튀김\n";
                 totalCost += 3500;
                 lstOrder.Items.Add("감자튀김 3,500원");
             }
             if (chkCola.Checked)
             {
-                order += "콜라\n";
                 totalCost += 2500;
                 lstOrder.Items.Add("콜라 2,500원");
             }
             if (chkCheese.Checked)
             {
-                order += "치즈추가\n";
                 totalCost += 1500;
-                lstOrder.Items.Add("치즈추가 1,500원");
+                lstOrder.Items.Add("치즈 추가 1,500원");
             }
             if (chkSauce.Checked)
             {
-                order += "소스추가\n";
                 totalCost += 500;
                 lstOrder.Items.Add("소스 추가 500원");
             }
 
-            lblTotalCost.Text =totalCost.ToString("N0") + "원";
+            if (totalCost == 0)
+            {
+                lblTotalCost.ForeColor = Color.Red;
+                lblTotalCost.Text = "메뉴를 선택해주세요";
+            }
+            else
+            {
+                lblTotalCost.ForeColor = Color.MediumBlue;
+                lblTotalCost.Text = "총 주문 금액: " + totalCost.ToString("N0") + "원";
+            }
 
         }
 
