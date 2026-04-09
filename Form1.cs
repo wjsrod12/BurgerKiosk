@@ -25,10 +25,11 @@ namespace BurgerKiosk
 
         }
 
-        int totalCost = 0;
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            int totalCost = 0;
+
             if (rdoHamBurger.Checked)
             {
                 totalCost += 5000;
@@ -67,7 +68,14 @@ namespace BurgerKiosk
                 lstOrder.Items.Add("소스 추가 500원");
             }
 
+            lblTotalCost.ForeColor = Color.MediumBlue;
             lblTotalCost.Text= "총 주문 금액:" +totalCost+"원";
+
+            if (totalCost == 0)
+            {
+                lblTotalCost.ForeColor = Color.Red;
+                lblTotalCost.Text = "메뉴를 선택해주세요";
+            }
 
         }
                 }
