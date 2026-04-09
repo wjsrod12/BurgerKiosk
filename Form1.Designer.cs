@@ -123,6 +123,7 @@
             rdoCheeseBurger.TabStop = true;
             rdoCheeseBurger.Text = "치즈버거";
             rdoCheeseBurger.UseVisualStyleBackColor = true;
+            rdoCheeseBurger.CheckedChanged += rdoCheeseBurger_CheckedChanged;
             // 
             // rdoBulgogiBurger
             // 
@@ -136,6 +137,7 @@
             rdoBulgogiBurger.TabStop = true;
             rdoBulgogiBurger.Text = "불고기 버거";
             rdoBulgogiBurger.UseVisualStyleBackColor = true;
+            rdoBulgogiBurger.CheckedChanged += rdoBulgogiBurger_CheckedChanged;
             // 
             // rdoHamBurger
             // 
@@ -176,6 +178,7 @@
             chkSauce.TabIndex = 3;
             chkSauce.Text = "소스 추가";
             chkSauce.UseVisualStyleBackColor = true;
+            chkSauce.CheckedChanged += chkSauce_CheckedChanged;
             // 
             // chkCheese
             // 
@@ -187,6 +190,7 @@
             chkCheese.TabIndex = 2;
             chkCheese.Text = "치즈 추가";
             chkCheese.UseVisualStyleBackColor = true;
+            chkCheese.CheckedChanged += chkCheese_CheckedChanged;
             // 
             // chkCola
             // 
@@ -198,6 +202,7 @@
             chkCola.TabIndex = 1;
             chkCola.Text = "콜라";
             chkCola.UseVisualStyleBackColor = true;
+            chkCola.CheckedChanged += chkCola_CheckedChanged;
             // 
             // chkPotato
             // 
@@ -209,6 +214,7 @@
             chkPotato.TabIndex = 0;
             chkPotato.Text = "감자튀김";
             chkPotato.UseVisualStyleBackColor = true;
+            chkPotato.CheckedChanged += chkPotato_CheckedChanged;
             // 
             // grbOrderList
             // 
@@ -250,7 +256,7 @@
             btnOrder.Location = new Point(518, 373);
             btnOrder.Name = "btnOrder";
             btnOrder.Size = new Size(109, 41);
-            btnOrder.TabIndex = 4;
+            btnOrder.TabIndex = 3;
             btnOrder.Text = "주문하기";
             btnOrder.UseVisualStyleBackColor = false;
             btnOrder.Click += btnOrder_Click;
@@ -262,7 +268,7 @@
             btnReset.Location = new Point(652, 373);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(109, 41);
-            btnReset.TabIndex = 5;
+            btnReset.TabIndex = 4;
             btnReset.Text = "초기화";
             btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
